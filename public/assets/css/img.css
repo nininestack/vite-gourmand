@@ -1,0 +1,178 @@
+/* LOGO*/
+
+.alogo1-image img {
+  width: 60px;
+  height: 72px;
+}
+
+/*IMG ACCUEIL EN LONGUEUR*/
+
+.accueil-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.accueil-image {
+  width: 100%;
+  display: block;
+  line-height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*FOURCHETTE GAUCHE*/
+
+.fourchette1-image {
+  width: 100%;
+  position: relative;
+  height: 0;
+  z-index: 10;
+}
+
+.fourchette1-image img {
+  position: absolute;
+  left: 0;
+  top: -110px;
+}
+
+/* CUILLERE DROITE*/
+
+.fourchette2-image {
+  width: 100%;
+  position: relative;
+  height: 0;
+  z-index: 10;
+}
+
+.fourchette2-image img {
+  position: absolute;
+  right: 0;
+  top: -100px;
+  width: 400px;
+}
+
+/* IMG MENUS*/
+
+.menu-image {
+  flex: 1 1 250px;
+  width: auto;
+  text-align: center;
+  color: var(--color-background);
+  position: relative;
+  overflow: visible;
+}
+
+.menu-image h3,
+.menu-image a {
+  position: relative;
+  z-index: 2;
+}
+
+.menu-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: 0.3s ease;
+}
+
+/*IMG MENUS OPAQUE SURVOL*/
+.menu-image:hover img {
+  transform: scale(1.03);
+  filter: brightness(60%);
+}
+
+/* ECREVISSE IMG*/
+
+.ecrevisse-image {
+  flex: 0 0 45%;
+  max-width: none;
+}
+
+.ecrevisse-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* IMG BAS DE PAGE*/
+
+.accueilbas-image {
+  flex: 1;
+}
+
+.accueilbas-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/*IMG A PROPOS*/
+
+.about-image {
+  width: 100%;
+  display: block;
+  line-height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.about-images {
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+  padding: 50px 0px;
+  background-color: var(--color-primary);
+}
+
+.about-image1 img {
+  width: 100%;
+  max-width: 420px;
+  display: block;
+}
+
+/* MEDIA*/
+
+@media (max-width: 1024px) {
+  .fourchette2-image img {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-images {
+    flex-direction: column;
+  }
+
+  .about-image img {
+    min-height: 120px;
+  }
+
+  .fourchette1-image img {
+    width: 250px;
+    top: -50px;
+  }
+
+  .accueil-image img {
+    min-height: 120px;
+  }
+
+  .menu-image {
+    width: 90%;
+    max-width: 250px;
+    margin: 0;
+  }
+
+  .ecrevisse-image {
+    display: none;
+  }
+}

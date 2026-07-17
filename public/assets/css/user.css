@@ -1,0 +1,298 @@
+/*SECTION UTILISATEUR*/
+
+.user {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: center;
+}
+
+/*FORMULAIRE*/
+
+.user-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 350px;
+}
+
+/*LIBELLES*/
+
+.user-form label {
+  text-align: left;
+  color: #fdf4e3;
+}
+
+/*BTN FORMULAIRE*/
+
+.user-form .user-btn {
+  margin-top: 20px;
+  font-family: var(--font-primary);
+  font-size: var(--fs-small);
+}
+
+/*MISE EN PAGE SECTIONS*/
+
+.user-layout {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 200px;
+  padding: 100px;
+}
+
+.user-form input,
+.user-form textarea,
+.user-form select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  font-family: var(--font-primary);
+  font-size: var(--fs-small);
+  background-color: transparent;
+  color: var(--text-light);
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius);
+  outline: none;
+}
+/*COMMANDE EN COURS*/
+
+.current-order {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/*TITRE COMMANDE EN C.*/
+
+.current-order h2 {
+  margin-bottom: 30px;
+}
+
+/*LIEN COMMANDE EN C.*/
+
+.current-order a {
+  margin-top: 20px;
+  font-family: var(--font-primary);
+  font-size: var(--fs-small);
+}
+
+/*HISTORIQUE DES COMMANDES*/
+
+.order-history {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.order-history h2 {
+  margin-bottom: 30px;
+}
+
+.order-history a {
+  margin-top: 20px;
+  font-family: var(--font-primary);
+  font-size: var(--fs-small);
+}
+
+/* TRAITS DE SEPARATION DE COMMANDES*/
+.order-history hr {
+  width: 130%;
+  margin-left: -15%;
+  border: 0;
+  border-top: 1px solid var(--color-primary);
+}
+
+/*BOUTONS*/
+
+/*BOUTONS*/
+
+.user-btn {
+  font-family: var(--font-primary);
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  padding: 6px 14px;
+  font-size: var(--fs-extra-small);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  line-height: 1;
+  transition: opacity 0.2s ease;
+  margin: var(--space-xs);
+  font-weight: bold;
+}
+
+.user-btn:hover {
+  opacity: 0.85;
+}
+
+/* MODIFIER */
+
+.btn-edit {
+  background-color: var(--color-primary);
+  color: var(--text-dark);
+}
+
+/* SUPPRIMER */
+
+.btn-delete {
+  background-color: var(--color-secondary);
+  color: var(--text-dark);
+}
+
+/*CREER*/
+
+.btn-create {
+  background-color: #373736;
+  color: var(--text-light);
+}
+
+/*RETOUR*/
+
+.btn-return {
+  background-color: var(--color-tertiary);
+  color: var(--text-light);
+}
+
+/*LOGOUT CENTRE*/
+
+.logout {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-md);
+}
+
+/* FORMULAIRE MOT DE PASSE CENTRE ET RESPONSIVE */
+
+.password-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 50px 20px;
+}
+
+.password-container .user-form {
+  width: 100%;
+  max-width: 350px;
+}
+
+/* INPUTS RESPONSIVE */
+
+.password-container input {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* RECAPITULATIF COMMANDE */
+
+.order-recap {
+  max-width: 650px;
+  margin: 50px auto;
+  padding: 0 25px;
+
+  color: var(--text-light);
+}
+
+.order-recap h3 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.order-recap h4 {
+  margin-top: 15px;
+}
+
+/* TEXTES */
+
+.order-recap p {
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+/* CARTE MENU RECAP */
+
+.recap-menu {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: var(--color-tertiary);
+  border-radius: var(--radius);
+  padding: 15px 20px;
+  margin: 15px 0;
+}
+
+.recap-menu-image {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
+.recap-menu-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.recap-menu-info h4 {
+  margin: 0 0 10px;
+}
+
+.recap-menu-info p {
+  margin: 5px 0;
+}
+/* TOTAL */
+
+.order-recap h4:last-of-type {
+  margin: 20px;
+}
+
+/* BOUTON */
+
+.order-recap .user-btn {
+  margin-top: 40px;
+}
+
+/*MEDIA*/
+
+@media (max-width: 768px) {
+  .user-layout {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-lg);
+    padding: 30px 20px;
+  }
+
+  .user {
+    width: 100%;
+    align-items: center;
+  }
+
+  .user-form {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .user-form .user-btn {
+    width: fit-content;
+    align-self: center;
+  }
+
+  .current-order,
+  .order-history {
+    width: 100%;
+    text-align: center;
+  }
+
+  .current-order h2,
+  .order-history h2 {
+    margin-bottom: 15px;
+  }
+
+  .order-history hr {
+    width: 100%;
+    margin-left: 0;
+  }
+}

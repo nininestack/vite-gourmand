@@ -1,0 +1,33 @@
+/* CONTENEUR PRINCIPAL */
+
+.cgv {
+        padding: 60px;
+        text-align: left;
+    }
+
+/* TITRE*/
+
+.cgv h1 {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* SOUS TITRE*/
+
+.cgv h2 {
+    padding: 20px;
+}
+
+/* PARAGRAPHE*/
+
+.cgv p {
+    padding: 5px;
+    font-size: var(--fs-extra-small);
+}
+
+/* ELEMENTS DE LISTE*/
+
+.cgv li {
+    padding: 3px;
+    font-size: var(--fs-extra-small);
+}

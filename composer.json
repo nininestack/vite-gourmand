@@ -1,0 +1,13 @@
+{
+    "name": "eline/vite-gourmand",
+    "description": "Application Web Vite & Gourmand",
+    "authors": [
+        {
+            "name": "nininestack",
+            "email": "eline.brun280@gmail.com"
+        }
+    ],
+    "require": {
+        "mongodb/mongodb": "^2.3"
+    }
+}

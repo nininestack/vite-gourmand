@@ -1,0 +1,213 @@
+/* SECTION MENU POP*/
+
+.menu-populaire {
+  background-color: var(--color-primary);
+  color: var(--text-dark);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: clamp(20px, 3vw, 40px);
+  padding: clamp(20px, 5vw, 50px);
+  flex-wrap: wrap;
+}
+
+/* TITRES*/
+.menu-populaire h3 {
+  color: var(--text-dark);
+  margin-top: 20px;
+  letter-spacing: 2px;
+  font-weight: 1000;
+}
+
+/* LIENS */
+.menu-populaire a {
+  color: var(--text-dark);
+  text-decoration: none;
+}
+
+/* SECTION HISTOIRE*/
+
+.histoire {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1000px;
+}
+
+.histoire h1 {
+  margin-bottom: clamp(40px, 5vw, 100px);
+}
+
+.histoire p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.histoire .btn-red {
+  margin-top: clamp(40px, 5vw, 100px);
+}
+
+/* SECTION POURQUOI */
+
+.pourquoinous {
+  width: 100%;
+  max-width: 1200px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(40px, 8vw, 100px);
+}
+
+.pourquoi {
+  flex: 1;
+  color: var(--color-background);
+  text-align: left;
+}
+
+.pourquoi h1 {
+  white-space: normal;
+}
+
+.pourquoi p {
+  margin-bottom: 25px;
+}
+
+/* LIENS*/
+.pourquoi a {
+  color: var(--text-light);
+}
+
+/* SECTION COMMENT CA FONCTIONNE */
+
+.fonctionne {
+  text-align: center;
+  padding: 80px 0;
+  color: var(--color-background);
+}
+
+/*ETAPES*/
+.etapes {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.etape {
+  flex: 1;
+  max-width: 300px;
+}
+
+/*PARAGRAPHE*/
+.etape p {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* CERCLES ROUGES*/
+.cercle {
+  width: clamp(45px, 6vw, 66px);
+  height: clamp(45px, 6vw, 66px);
+  border-radius: 50%;
+  background-color: var(--color-secondary);
+  margin: 0 auto 25px auto;
+  transition: opacity 0.3s ease;
+}
+
+/* CERCLE OPAQUE SURVOL*/
+.etape:hover .cercle {
+  opacity: 0.6;
+}
+
+/* CONTENEUR DU BAS DE PAGE*/
+
+.accueilbas-containeur {
+  display: flex;
+  width: 100%;
+  gap: 0;
+}
+
+/* MEDIA */
+
+@media (max-width: 768px) {
+  .menu-populaire {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    gap: 40px;
+  }
+
+  .histoire h1 {
+    margin-bottom: 40px;
+  }
+
+  .histoire p {
+    font-size: 16px;
+  }
+
+  .histoire .separation {
+    margin: 30px 0;
+  }
+
+  .histoire .btn-red {
+    margin-top: 40px;
+  }
+
+  .pourquoinous {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .pourquoi {
+    margin: 0;
+    text-align: center;
+  }
+
+  .pourquoi h1 {
+    white-space: normal;
+  }
+
+  .etapes {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .accueilbas-containeur {
+    flex-direction: column;
+  }
+
+  .pourquoinous {
+    flex-direction: column;
+    gap: 30px;
+    padding: 0;
+  }
+
+  .pourquoi {
+    margin: 0;
+    text-align: center;
+  }
+
+  .pourquoi h1 {
+    white-space: normal;
+    font-size: clamp(24px, 7vw, 32px);
+  }
+
+  .pourquoi p {
+    margin-bottom: 20px;
+  }
+
+  .fonctionne {
+    padding: 25px 0;
+  }
+
+  .etapes {
+    gap: 20px;
+  }
+
+  .cercle {
+    margin-bottom: 10px;
+  }
+}

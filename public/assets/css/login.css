@@ -1,0 +1,119 @@
+/* CONTENEUR PRINCIPAL*/
+
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* COLONNE*/
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 100%;
+  max-width: 500px;
+  align-items: center;
+}
+
+/* BOUTON*/
+
+.login-form button {
+  width: auto;
+  align-self: center;
+  margin-top: 20px;
+}
+
+/* LABEL*/
+.login-form label {
+  text-align: left;
+  color: var(--text-light);
+}
+
+/* CHAQUE CHAMP DANS GROUPE */
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.input-group label {
+  text-align: left;
+  color: var(--text-light);
+}
+
+.input-group input {
+  width: 100%;
+  height: 45px;
+  box-sizing: border-box;
+  padding: 0 18px;
+
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius);
+
+  background-color: transparent;
+  color: var(--text-light);
+
+  font-family: var(--font-primary);
+  font-size: var(--fs-small);
+
+  outline: none;
+}
+
+.input-group input:focus {
+  border-color: var(--color-secondary);
+}
+
+/* OPACITE AU SURVOL*/
+
+.login-form input:hover {
+  opacity: 0.9;
+}
+
+/* LIEN S ENREGISTRER */
+
+.register-link {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.register-link .small-text {
+  margin-top: 20px;
+}
+
+.register-link a {
+  color: #fdf4e3;
+  text-decoration: underline;
+}
+
+.register-link a:hover {
+  opacity: 0.9;
+}
+
+/* AUTO REMPLISSAGE*/
+
+.login-form input:-webkit-autofill,
+.login-form input:-webkit-autofill:hover,
+.login-form input:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--text-light);
+  box-shadow: 0 0 0px 1000px #000 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* MEDIA*/
+
+@media (max-width: 768px) {
+  .register-link {
+    margin-top: 50px;
+  }
+}

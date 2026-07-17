@@ -1,0 +1,20 @@
+# Dépendances Composer
+vendor/
+
+# Fichiers sensibles
+config.php
+config/database.php
+config/mongodb.php
+
+# Connexion BDD locale
+database/database.php
+
+# Tests
+database/test.php
+
+# Système
+.DS_Store
+Thumbs.db
+
+# Variables environnement
+.env

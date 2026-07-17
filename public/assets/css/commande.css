@@ -1,0 +1,250 @@
+.commande {
+  width: 700px;
+  margin: 80px auto;
+  text-align: center;
+}
+
+.commande-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.input-group label {
+  margin-bottom: 8px;
+  color: var(--color-primary);
+}
+
+.commande-form input,
+.commande-form select {
+  height: 45px;
+  padding: 0 20px;
+
+  border: none;
+  border-radius: 20px;
+
+  background-color: var(--color-tertiary);
+  color: var(--color-primary);
+
+  font-family: var(--font-primary);
+}
+
+.commande-form .btn-primary {
+  align-self: center;
+  margin-top: 15px;
+}
+
+.commande-summary {
+  width: 700px;
+  margin: 70px auto;
+  background-color: var(--color-tertiary);
+  border-radius: 30px;
+  padding: 40px;
+}
+
+.commande-summary h2 {
+  margin-bottom: 35px;
+  color: var(--color-primary);
+}
+
+.summary-line {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.summary-total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+/* PANIER */
+
+.panier {
+  width: 90%;
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+/* CARTE */
+
+.ligne-panier {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  background-color: var(--color-tertiary);
+  padding: 30px;
+  border-radius: var(--radius);
+  margin-bottom: 30px;
+}
+
+/* IMAGE */
+
+.panier-image {
+  width: clamp(150px, 25vw, 220px);
+  border-radius: var(--radius);
+  flex-shrink: 0;
+}
+
+/* DETAILS */
+
+.panier-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.panier-details h2 {
+  margin: 0;
+  overflow-wrap: break-word;
+}
+
+/* QUANTITE */
+
+.quantite {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.quantite a {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-primary);
+  color: var(--text-dark);
+  border-radius: 50%;
+}
+
+/* SUPPRIMER */
+
+.btn-create {
+  align-self: flex-start;
+}
+
+.btn-finaliser {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: fit-content;
+  margin: 40px auto;
+}
+
+.panier-vide {
+  text-align: center;
+
+  padding: 50px 20px;
+}
+
+.panier-vide p {
+  margin-bottom: 25px;
+}
+
+/* VALIDATION COMMANDE */
+
+.client-info,
+.validation-commande {
+  width: 90%;
+  max-width: 900px;
+  margin: 30px auto;
+}
+
+.commande-card {
+  background-color: var(--color-tertiary);
+  border-radius: var(--radius);
+  padding: 40px;
+}
+
+.info-card p {
+  margin: 12px 0;
+  border-radius: var(--radius);
+  background-color: var(--color-background);
+}
+
+.commande-card form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+/* LABELS */
+
+.commande-card label {
+  color: var(--color-primary);
+
+  margin-top: 10px;
+}
+
+/* INPUTS */
+
+.commande-card input,
+.commande-card select,
+.commande-card textarea {
+  width: 100%;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: var(--color-primary);
+  color: var(--text-dark);
+  font-family: var(--font-primary);
+}
+
+.commande-card textarea {
+  min-height: 120px;
+  resize: none;
+}
+
+/* MENU DANS RESUME */
+
+.commande-card h3 {
+  margin-top: 20px;
+  color: var(--color-primary);
+}
+
+.commande-menu {
+  background-color: var(--color-primary);
+  padding: 10px;
+  border-radius: 20px;
+  margin: 15px 0;
+}
+
+/* TOTAL */
+
+#total_final {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  .ligne-panier {
+    flex-direction: column;
+
+    text-align: center;
+  }
+
+  .panier-details {
+    align-items: center;
+  }
+
+  .btn-create {
+    align-self: center;
+  }
+}
