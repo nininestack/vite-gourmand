@@ -1,68 +1,3 @@
-<?php
-
-// VERIFICATION DES CHAMPS
-
-if (
-    empty($_POST['name']) ||
-    empty($_POST['email']) ||
-    empty($_POST['message'])
-) {
-    header("Location: contact.php?error=1");
-    exit();
-}
-
-// RECUPERATION DES DONNEES
-
-$nom = trim($_POST['name']);
-$entreprise = trim($_POST['company']);
-$email = trim($_POST['email']);
-$telephone = trim($_POST['phone']);
-$message_client = trim($_POST['message']);
-
-// MAIL ENTREPRISE
-
-$email_entreprise = "contact@viteetgourmand.fr";
-
-$subject = "Nouveau message depuis le formulaire de contact";
-
-$message = "
-Vous avez reçu un nouveau message via le site Vite & Gourmand.
-
-Nom :
-$nom
-
-Entreprise :
-" . ($entreprise ?: "Non renseignée") . "
-
-Email :
-$email
-
-Téléphone :
-" . ($telephone ?: "Non renseigné") . "
-
-Message :
-
-$message_client
-";
-
-$headers = "From: contact@viteetgourmand.fr\r\n";
-$headers .= "Reply-To: $email\r\n";
-$headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
-
-mail(
-    $email_entreprise,
-    $subject,
-    $message,
-    $headers
-);
-
-// REDIRECTION
-
-header("Location: contact.php?success=1");
-exit();
-
-?>
-
 <!-- HEADER-->
 
 <?php require_once 'includes/header_contact.php'; ?>
@@ -129,11 +64,7 @@ exit();
 </section>
 
 <div class="accueil-image">
-    <picture>
-        <source media="(max-width: 768px)" srcset="public/assets/img/mob/mob_focaccia.png">
-        <source media="(min-width: 769px)" srcset="public/assets/img/web/web_focaccia.png">
-        <img src="public/assets/img/mob/mob_focaccia.png" alt="CONTACT">
-    </picture>
+        <img src="public/assets/img/web/web_focaccia.png" alt="CONTACT">
 </div>
 
 

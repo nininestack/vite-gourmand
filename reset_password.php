@@ -7,7 +7,7 @@ session_start();
 
 // CONNEXION BDD
 
-require_once 'database/database.php';
+require_once 'config/database/database.php';
 
 
 $error = null;

@@ -2,7 +2,7 @@
 
 // CONNEXION A LA BASE DE DONNEES
 
-require_once 'database/database.php';
+require_once 'config/database/database.php';
 
 // RECUPERER LES MENUS
 

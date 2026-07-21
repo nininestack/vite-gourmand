@@ -6,7 +6,7 @@ session_start();
 
 // CONNEXION BDD
 
-require_once 'database/database.php';
+require_once 'config/database/database.php';
 
 // VERIFIER LA METHODE
 
@@ -65,6 +65,44 @@ $stmt->execute([
     'message' => $message
 
 ]);
+
+// MAIL ENTREPRISE
+
+$email_entreprise = "contact@viteetgourmand.fr";
+
+$subject = "Nouveau message depuis le formulaire de contact";
+
+$message = "
+Vous avez reçu un nouveau message via le site Vite & Gourmand.
+
+Nom :
+$nom
+
+Entreprise :
+" . ($entreprise ?: "Non renseignée") . "
+
+Email :
+$email
+
+Téléphone :
+" . ($telephone ?: "Non renseigné") . "
+
+Message :
+
+$message_client
+";
+
+$headers = "From: contact@viteetgourmand.fr\r\n";
+$headers .= "Reply-To: $email\r\n";
+$headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
+
+mail(
+    $email_entreprise,
+    $subject,
+    $message,
+    $headers
+);
+
 
 header("Location: contact.php?success=1");
 exit();

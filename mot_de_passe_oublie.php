@@ -6,7 +6,7 @@ session_start();
 
 // CONNEXION BDD
 
-require_once 'database/database.php';
+require_once 'config/database/database.php';
 
 
 // TRAITEMENT FORMULAIRE
@@ -73,7 +73,7 @@ VALUES
 
     // LIEN DE REINITIALISATION
 
-    $lien = "http://localhost/vite-gourmand/reset_password.php?token=" . $token;
+    $lien = "https://vite-gourmand.oo.gd/reset_password.php?token=" . $token;
 
 
     // MAIL REINITIALISATION MOT DE PASSE

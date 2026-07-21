@@ -7,10 +7,10 @@ config/database.php
 config/mongodb.php
 
 # Connexion BDD locale
-database/database.php
+config/database/database.php
 
 # Tests
-database/test.php
+config/database/test.php
 
 # Système
 .DS_Store

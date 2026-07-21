@@ -2,7 +2,7 @@
 
 .alogo1-image img {
   width: 60px;
-  height: 72px;
+  height: auto;
 }
 
 /*IMG ACCUEIL EN LONGUEUR*/
@@ -149,6 +149,12 @@
 }
 
 @media (max-width: 768px) {
+    .alogo1-image img {
+        width: 45px;
+        height: auto;
+        display: block;
+    }
+    
   .about-images {
     flex-direction: column;
   }

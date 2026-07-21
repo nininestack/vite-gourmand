@@ -4,7 +4,7 @@
 
 session_start();
 
-require_once "database/database.php";
+require_once "config/database/database.php";
 
 // ACCES ADMIN & EMPLOYE 
 

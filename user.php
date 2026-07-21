@@ -3,7 +3,7 @@
 // SESSION ET SECURITE
 
 session_start();
-require_once 'database/database.php';
+require_once 'config/database/database.php';
 
 if (!isset($_SESSION['user_role']) || $_SESSION['user_role'] !== 'client') {
     header("Location: login.php");

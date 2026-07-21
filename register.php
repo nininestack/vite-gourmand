@@ -7,7 +7,7 @@ session_start();
 
 // CONNEXION BASE DE DONNEES
 
-require_once 'database/database.php';
+require_once 'config/database/database.php';
 
 
 // VERIFIER ENVOI FORMULAIRE

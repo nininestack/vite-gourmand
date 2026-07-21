@@ -3,7 +3,7 @@
 // CONNECTION A LA BASE DE DONNEES
 
 session_start();
-require_once 'database/database.php';
+require_once 'config/database/database.php';
 
 // AJOUT AU PANIER
 
